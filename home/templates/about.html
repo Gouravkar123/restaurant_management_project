@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #f1f1f1);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #222;
+      padding: 1rem 0;
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff9800;
+    }
+
+    .about-hero {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #ff9800;
+    }
+
+    .about-hero p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-box {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: #ff9800;
+      color: white;
+      font-weight: 500;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+    </nav>
+  </header>
+
+  <main class="about-hero">
+    <h1>About Our Restaurant</h1>
+    <p>
+      Welcome to our kitchen! We serve seasonal, locally-sourced dishes with a modern twist.  
+      From hearty lunches to cozy dinners, our chefs focus on fresh ingredients, bold flavors,  
+      and warm hospitality. Pull up a chair—good food and good company await.
+    </p>
+    <p>
+      We also cater events and offer custom menus. Reach out to us anytime for reservations  
+      or special requests. Your satisfaction is our top priority.
+    </p>
+
+    <div class="highlight-box">
+      ✨ "Good food is the foundation of genuine happiness." ✨
+    </div>
+  </main>
+</body>
+</html>
