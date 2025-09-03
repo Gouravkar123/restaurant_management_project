@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django stuff
+*.sqlite3
+db.sqlite3
+
+# VSCode / IDE
+.vscode/
+.idea/
