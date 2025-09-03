@@ -26,3 +26,7 @@ urlpatterns = [
     path('api/products/',include('products.urls')),
     path('api/orders/',include('orders.urls')),
 ]
+
+from home import views as home_views
+
+handler404 = home_views.custom_404
